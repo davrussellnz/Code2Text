@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Code2Text</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+      body {
+          background: linear-gradient(to right, yellow, rgb(255, 140, 0));
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          height: 100vh;
+          margin: 0;
+          background-repeat: no-repeat;
+          background-attachment: fixed;
+          font-weight: bold;
+      }
+  
+      form {
+          width: 30%; 
+          background: rgb(187, 215, 187);
+          padding: 20px;
+          border-radius: 8px;
+          margin: auto;
+      }
+  
+      .form-group {
+          margin-bottom: 10px;
+      }
+  
+      label {
+          margin-top: 10px;
+      }
+      
+      input[type="text"], .form-control {
+          border: 1px solid #ccc;
+          border-radius: 4px;
+          padding: 6px 12px;
+          width: 100%;
+          font-weight: bold;
+      }
+  
+      .btn-primary {
+          background-color: #007bff;
+          border-color: #007bff;
+         
+      }
+      .h2 {
+    
+    text-shadow: 4px 4px 10px rgba(0,0,0,0.8);
+}
+      
+  </style>
+  </head>
+  <body>
+    <form action="/convert" method="post">
+      <h2>Code2Text</h2>
+      <div class="form-group">
+        <label for="directory">Directory</label>
+        <input type="text" name="directory" id="directory" class="form-control">
+      </div>
+      <div class="form-group">
+        <label for="output">Output Directory</label>
+        <input type="text" name="output" id="output" class="form-control">
+      </div>
+      <div class="form-group">
+
+        <label for="outputFile">Output File Name:</label><br>
+        <input type="text" id="outputFile" name="outputFile" class="form-control"><br>
+      </div>
+      <input type="submit" value="Convert" class="btn btn-primary">
+    </form>
+  </div>
+</body>
+</html>
