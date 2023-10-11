@@ -9,6 +9,10 @@ const app = express();
 app.use(express.static('public'));
 app.use(bodyParser.urlencoded({ extended: true }));
 
+app.get('/', function (req, res) {
+    res.sendFile(__dirname + '/public/index.html');
+});
+
 app.post('/convert', function (req, res) {
     const directory = req.body.directory;
     const output = req.body.output;
